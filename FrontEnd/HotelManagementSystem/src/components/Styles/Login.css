@@ -1,0 +1,129 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8; /* Off-White background */
+}
+
+.Login-Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f8f8; /* Off-White background */
+    padding: 1rem; /* Add padding for smaller screens */
+}
+
+.Login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border-top: 4px solid #d4af37; /* Gold border */
+}
+
+.Login-box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3a8a; /* Deep Navy Blue */
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e3a8a; /* Deep Navy Blue */
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4ecdc4; /* Soft Teal for focus */
+    box-shadow: 0 0 5px rgba(78, 205, 196, 0.5);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e3a8a; /* Deep Navy Blue */
+    border: none;
+    color: white; /* White text for contrast */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+    background-color: #152c5b; /* Darker shade of navy blue */
+}
+
+.login-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.5); /* Deep Navy Blue shadow */
+}
+
+.signup-link {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #1e3a8a; /* Deep Navy Blue */
+}
+
+.signup-link a {
+    color: #4ecdc4; /* Soft Teal for links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff6b6b; /* Soft Red for errors */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .Login-box {
+        padding: 1.5rem;
+    }
+
+    .Login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    .login-button {
+        padding: 10px;
+    }
+}

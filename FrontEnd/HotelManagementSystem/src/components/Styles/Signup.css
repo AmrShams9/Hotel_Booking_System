@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #2C3E50, #34495E); /* Charcoal gray to deep slate blue gradient */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+
+.auth-inner {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.auth-inner:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: #2C3E50; /* Charcoal gray for headings */
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #2C3E50; /* Charcoal gray for labels */
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333333; /* Dark gray for text */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #D4AF37; /* Soft gold for focus */
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, #D4AF37, #2C3E50); /* Soft gold to charcoal gray gradient */
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, #C0A332, #27374D); /* Darker gradient for hover */
+  transform: translateY(-2px);
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Optional: Add a subtle animation to the form on load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-inner {
+  animation: fadeIn 0.6s ease-in-out;
+}
