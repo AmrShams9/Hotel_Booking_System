@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 const LandingPage = () => { 
   return(
     <div>
+
+      {/* Ossama was here */}
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="container">
