@@ -17,7 +17,19 @@ const LandingPage = () => {
           <a href="#" className="btn btn-primary">Book Now</a>
         </div>
       </nav>
+       {/* Hero Section */}
+       <section id="home" className="hero">
+        <div className="container">
+          <div className="hero-content">
+            <h1>Your Luxury Stay Awaits</h1>
+            <p>Discover the finest hotels and resorts tailored to your needs. Book your dream stay today!</p>
+            <a href="#" className="btn btn-primary">Explore Hotels</a>
+          </div>
+        </div>
+      </section>
+
     </div>
+    
   );
  }
 
