@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Styles/SignUp.css';
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,11 @@ export default function Signup() {
   };
 
   return (
+    <div><nav className="navbar">
+        <div className="container">
+        <Link to="/" className="logo">LuxStay</Link>
+          </div>
+          </nav>
     <div className='auth-wrapper'>
         <div className='auth-inner'>
         <h2 className="text-center mb-4">Register</h2>
@@ -72,6 +78,7 @@ export default function Signup() {
           Sign Up
         </button>
       </form>
+    </div>
     </div>
     </div>
   );

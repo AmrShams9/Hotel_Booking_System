@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Styles/Login.css';
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -12,7 +13,15 @@ export default function Login() {
   };
 
   return (
+    <div>
+    <nav className="navbar">
+    <div className="container">
+    <Link to="/" className="logo">LuxStay</Link>
+      </div>
+      </nav>
+    
     <div className="Login-Container">
+     
       <div className="Login-box">
         <h2>Login Page</h2>
         <form onSubmit={handleSubmit}>
@@ -50,6 +59,7 @@ export default function Login() {
           Don't have an account? <a href="/signup">Sign up</a>
         </p>
       </div>
+    </div>
     </div>
   );
 }
