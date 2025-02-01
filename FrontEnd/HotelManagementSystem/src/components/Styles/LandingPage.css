@@ -211,3 +211,35 @@ body {
     margin: 0 10px;
     font-size: 20px;
   }
+
+  /* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-secondary {
+  background: #34495E; /* Dark blue-gray */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #2C3E50; /* Slightly darker shade */
+}
+
+.btn-primary {
+  background: #D4AF37; /* Gold */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #B89329; /* Darker gold */
+}

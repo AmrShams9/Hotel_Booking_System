@@ -1,6 +1,7 @@
 import React from "react";
 import './Styles/LandingPage.css';
 import { FaHotel, FaMapMarkedAlt, FaHandHoldingUsd } from 'react-icons/fa'; // Icons for features
+import { Link } from "react-router-dom";
 
 const LandingPage = () => { 
   return(
@@ -15,7 +16,10 @@ const LandingPage = () => {
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <a href="#" className="btn btn-primary">Book Now</a>
+          <div className="auth-buttons">
+          <Link to="/login" className="btn btn-primary">Login</Link>
+          <Link to="/register" className="btn btn-primary">Register</Link>
+          </div>
         </div>
       </nav>
        {/* Hero Section */}
