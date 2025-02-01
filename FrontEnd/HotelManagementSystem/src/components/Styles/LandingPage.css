@@ -147,6 +147,12 @@ body {
     border-radius: 50%;
     margin-bottom: 20px;
   }
+  .testimonial-item p{
+    color:#2C3E50;
+  }
+  .testimonial-item h4{
+    color:#2C3E50;
+  }
   
   /* Contact Section */
   .contact {
@@ -166,6 +172,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
   }
   
   .contact input,
@@ -174,6 +181,8 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    color: aliceblue;
+    background-color: #ddd;
   }
   
   .contact .btn-primary {

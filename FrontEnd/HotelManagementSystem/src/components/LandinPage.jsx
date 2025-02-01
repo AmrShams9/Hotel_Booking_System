@@ -52,9 +52,54 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Testimonial Section */}
+      <section id="testimonials" className="testimonials">
+        <div className="container">
+          <h2>What Our guests Say</h2>
+          <div className="testimonial-grid">
+            <div className="testimonial-item">
+            <img src="https://fakeimg.pl/300x300" alt="Guest 1" />
+            <p>"LuxStay made my vacation unforgettable. The service was impeccable!"</p>
+              <h4>- John Doe</h4>
+        </div>
+        <div className="testimonial-item">
+              <img src="https://fakeimg.pl/300x300" alt="Guest 2" />
+              <p>"The best hotel booking experience I've ever had. Highly recommended!"</p>
+              <h4>- Jane Smith</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Contact Section */}
+      <section id="contact" className="contact">
+        <div className="container">
+          <h2>Contact Us</h2>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" className="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
 
-
+      {/* Footer */}
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; 2025 LuxStay. All rights reserved.</p>
+          <div className="social-links">
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
     </div>
+
+
+
+
+    
     
   );
  }
