@@ -1,204 +1,430 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define the fade-in effect */
+@keyframes appear {
+  from {
+    opacity: 0;
+    /* Starts slightly below */
   }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+
+  to {
+    opacity: 1;
   }
-  
-  /* Navigation Bar */
-  .navbar {
-    background: #2C3E50;
-    color: white;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .navbar .btn-primary {
-    background: #D4AF37;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: linear-gradient(to bottom right, #2C3E50, #34495E);
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  
-  .hero .btn-primary {
-    background: #D4AF37;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  /* Features Section */
-  .features {
-    padding: 80px 0;
-    background: white;
-    text-align: center;
-  }
-  
-  .features h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .feature-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .feature-item {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-item:hover {
-    transform: translateY(-10px);
-  }
-  
-  .feature-icon {
-    font-size: 40px;
-    color: #D4AF37;
-    margin-bottom: 20px;
-  }
-  
-  /* Testimonials Section */
-  .testimonials {
-    padding: 80px 0;
-    background: #f8f8f8;
-    text-align: center;
-  }
-  
-  .testimonials h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .testimonial-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .testimonial-item {
-    flex: 1;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .testimonial-item img {
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  
-  /* Contact Section */
-  .contact {
-    padding: 80px 0;
-    background: white;
-    text-align: center;
-  }
-  
-  .contact h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .contact input,
-  .contact textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .contact .btn-primary {
-    background: #D4AF37;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  .footer {
-    background: #2C3E50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .footer .social-links {
-    margin-top: 10px;
-  }
-  
-  .footer .social-links a {
-    color: white;
-    margin: 0 10px;
-    font-size: 20px;
-  }
+}
+
+.scroll {
+  opacity: 0;
+  animation: appear 0.8s ease-out forwards;
+}
+
+
+/* When the element enters the viewport, apply the animation */
+.scroll.show {
+  animation: appear 0.8s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+}
+
+.hero-content::before,
+.hero-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.hero-content::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+}
+
+.hero-content::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+} */
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal columns */
+  grid-template-rows: auto auto;
+  /* Two rows */
+  gap: 10px;
+  color: white;
+  /* Space between images */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* First row: Single large image */
+.grid-item.large {
+  grid-column: span 3;
+  /* Covers all 3 columns */
+  position: relative;
+  /* Needed for text overlay */
+}
+
+.grid-item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Second row: Three smaller images */
+.grid-item.small {
+  width: 100%;
+  height: 400px;
+  /* Adjust height as needed */
+}
+
+/* Overlay content on large image */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(to bottom,
+      rgba(51, 51, 51, 0.5),
+      /* Top Transparent */
+      rgba(44, 44, 44, 0.4),
+      /* Middle Opaque */
+      rgba(45, 45, 45, 0.3),
+      /* Middle Opaque */
+      rgba(0, 0, 0, 0));
+  padding: 20px;
+  width: 97%;
+}
+
+.overlay h2 {
+  margin: 0 0 10px;
+  font-size: 3rem;
+  color: white;
+
+}
+
+.overlay p {
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.overlay .btn {
+  background: #D4AF37;
+  /* Gold */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.overlay .btn:hover {
+  background: #b89329;
+  /* Darker gold */
+}
+
+
+
+
+.navbar {
+  background: #2C3E50;
+  color: white;
+  padding: 10px 0;
+  height: 7rem;
+  top: 0;
+  z-index: 1000;
+  font-size: 1.3rem;
+
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffbf0e;
+}
+
+
+.navbar .nav-links a:active {
+  color: #ffbf0e;
+}
+
+
+.navbar .btn-primary {
+  background: #D4AF37;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+
+
+/* Features Section */
+.features {
+  padding: 80px 0;
+  background: #eaeaea;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 10px;
+}
+
+.feature-item {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: linear-gradient(0deg, rgba(244, 244, 244, 0.6) 0%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #D4AF37;
+  margin-bottom: 20px;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+  padding: 40px 0;
+  background: #eaeaea;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 20px 15px -25px rgba(0, 0, 0, 0.1);
+
+}
+
+.testimonial-item {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.testimonial-item img {
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.logo-hotel {
+  margin-left: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* Ensures consistent height */
+}
+
+
+
+
+/* Contact Section */
+.contact {
+  padding: 80px 0;
+  background: #eaeaea;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgb(240, 240, 240);
+}
+
+.contact .btn-primary {
+  background: #D4AF37;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #2C3E50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+}
+
+.footer .social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 2rem;
+}
+
+.btn-secondary {
+  background: #34495E;
+  /* Dark blue-gray */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #2C3E50;
+  /* Slightly darker shade */
+}
+
+.btn-primary {
+  background: #D4AF37;
+  /* Gold */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #B89329;
+  /* Darker gold */
+}
