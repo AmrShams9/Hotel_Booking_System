@@ -3,7 +3,7 @@ import './Styles/Login.css';
 import { Link } from "react-router-dom";
 
 export default function Login() {
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ email: '', password: '', role: 'user', });
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
@@ -57,6 +57,36 @@ export default function Login() {
                 required
               />
             </div>
+             {/* Role Selection Radio Buttons */}
+             <div className="form-group">
+  <label>Role</label>
+  <div className="radio-group">
+    <label>
+      <input
+        type="radio"
+        name="role"
+        value="user"
+        checked={formData.role === 'user'}
+        onChange={(e) =>
+          setFormData({ ...formData, role: e.target.value })
+        }
+      />
+      User
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="role"
+        value="admin"
+        checked={formData.role === 'admin'}
+        onChange={(e) =>
+          setFormData({ ...formData, role: e.target.value })
+        }
+      />
+      Admin
+    </label>
+  </div>
+</div>
             <button type="submit" className="login-button">
               Login
             </button>
