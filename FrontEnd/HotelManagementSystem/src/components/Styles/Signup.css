@@ -65,6 +65,50 @@ h2 {
   box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
 }
 
+/* Custom Radio Button Styles */
+.form-group .radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.form-group .radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #2C3E50; /* Charcoal gray for text */
+  font-weight: 500;
+}
+
+.form-group .radio-group input[type="radio"] {
+  appearance: none; /* Remove default styling */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #D4AF37; /* Soft gold border */
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.form-group .radio-group input[type="radio"]:checked {
+  background-color: #D4AF37; /* Soft gold background when checked */
+  border-color: #D4AF37;
+}
+
+.form-group .radio-group input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: white; /* White dot for checked state */
+  border-radius: 50%;
+}
+
 .btn-gradient {
   background: linear-gradient(to right, #D4AF37, #2C3E50); /* Soft gold to charcoal gray gradient */
   border: none;
