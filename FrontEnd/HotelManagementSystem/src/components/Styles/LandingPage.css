@@ -16,7 +16,7 @@ body {
   to {
     opacity: 1;
   }
-<<<<<<< HEAD
+
 }
 
 .scroll {
@@ -403,7 +403,7 @@ body {
 .btn-secondary {
   background: #34495E;
   /* Dark blue-gray */
-=======
+
   
   /* Navigation Bar */
   .navbar {
@@ -613,7 +613,7 @@ body {
 
 .btn-secondary {
   background: #34495E; /* Dark blue-gray */
->>>>>>> bb71c7035811171d18d331cb2d01fb040d31a46d
+
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -622,7 +622,6 @@ body {
 }
 
 .btn-secondary:hover {
-<<<<<<< HEAD
   background: #2C3E50;
   /* Slightly darker shade */
 }
@@ -630,13 +629,6 @@ body {
 .btn-primary {
   background: #D4AF37;
   /* Gold */
-=======
-  background: #2C3E50; /* Slightly darker shade */
-}
-
-.btn-primary {
-  background: #D4AF37; /* Gold */
->>>>>>> bb71c7035811171d18d331cb2d01fb040d31a46d
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -645,10 +637,6 @@ body {
 }
 
 .btn-primary:hover {
-<<<<<<< HEAD
   background: #B89329;
   /* Darker gold */
-=======
-  background: #B89329; /* Darker gold */
->>>>>>> bb71c7035811171d18d331cb2d01fb040d31a46d
-}
+}}
