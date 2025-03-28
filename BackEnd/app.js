@@ -109,12 +109,23 @@ app.get("/users", (req, res) => {
 
     }
 
+  });
+  app.put("/updatename" ,(req,res) =>{
+    const{email,password , newName} = req.body;
+    const user  = mockUsers.find((user) => user.email === email);
+    if(user && user.password ===password){
+      user.name = newName;
+      res.status(200).json({ message: "name changed successfully"});
 
-    
+    }
+    else{
+      res.status(401).json({ message: "oops error happened"});
 
-    
+    }
+
 
   });
+
 
 
 
