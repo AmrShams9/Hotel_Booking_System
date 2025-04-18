@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
     name : {
         type:String ,
         required : true ,
-        max:11
+        
     },
     city:{
         type:String ,
